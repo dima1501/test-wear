@@ -1,0 +1,70 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "gulp-pug-starter"
+
+block content
+	h1.page__title Отзывы о товаре (2)
+	main.main
+		section
+			article.review 	
+				p.review__date 08.09.2023
+				.review__rating
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star
+						use(xlink:href="img/sprites/sprite.svg#star")
+				h2.review__author Балашова Татьяна
+				p.review__text Отличное летнее платье с подкладкой, мне очень понравилось, но мне не подошло. покупала на 52 52ой, мало, на 48 или на 50 будет отлично.
+
+				.review__images
+					picture.review__picture
+						source(srcset="img/pic_1.webp 1x", type="image/webp")
+						source(srcset="img/pic_1.png 1x", type="image/png")
+						img(src="pic_1.png", alt="", width="", height="")
+					picture.review__picture
+						source(srcset="img/pic_2.webp 1x", type="image/webp")
+						source(srcset="img/pic_2.png 1x", type="image/png")
+						img(src="pic_2.png", alt="", width="", height="")
+
+				.review__response
+					p.review__date 08.09.2023
+					h2.review__author Ответ магазина:
+					p.review__text.review__text--sm Здравствуйте! Спасибо за Ваш отзыв! Мы очень рады, что Вы остались довольны сервисом и качеством товаров, представленных в нашем интернет-магазине! Надеемся увидеть Вас в числе наших постоянных клиентов!
+					p.review__note С уважением, клиентский сервис интернет-магазина
+
+			article.review 	
+				p.review__date 08.09.2023
+				.review__rating
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star.review__rating-star--fill
+						use(xlink:href="img/sprites/sprite.svg#star")
+					svg.review__rating-star
+						use(xlink:href="img/sprites/sprite.svg#star")
+				h2.review__author Иванова Елена
+				p.review__text Отличное летнее платье с подкладкой, мне очень понравилось, но мне не подошло. покупала на 52 52ой, мало, на 48 или на 50 будет отлично.
+
+				.review__response
+					p.review__date 08.09.2023
+					h2.review__author Ответ магазина:
+					p.review__text.review__text--sm Здравствуйте! Спасибо за Ваш отзыв! Мы очень рады, что Вы остались довольны сервисом и качеством товаров, представленных в нашем интернет-магазине! Надеемся увидеть Вас в числе наших постоянных клиентов!
+					p.review__note С уважением, клиентский сервис интернет-магазина
+
+		aside
+			include ../blocks/modules/r-form/r-form
+
+block scripts
+	//- script(src="js/vendor.js")
+	script(src="js/main.js")

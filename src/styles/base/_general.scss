@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    line-height: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    @include laptop {
+        display: flex;
+        gap: 30px
+    }
+}
+
+aside {
+    @include laptop {
+        width: 460px;
+        flex-shrink: 0;
+    }
+}

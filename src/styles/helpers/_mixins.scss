@@ -1,0 +1,20 @@
+// Миксин для планшетов (ширина 768px и больше)
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// Миксин для ноутбуков (ширина 1024px и больше)
+@mixin laptop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// Миксин для десктопа (ширина 1440px и больше)
+@mixin desktop {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}

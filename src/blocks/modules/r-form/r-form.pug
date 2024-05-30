@@ -1,0 +1,64 @@
+form.r-form.js-form(action="/upload") 
+
+    .r-form__success
+        h2.r-form__success-title Спасибо за  ваш отзыв!
+        p.r-form__success-text Ваш отзыв будет опубликован сразу после того, как его проверят наши сотрудники.
+
+    h2.r-form__title Оставить свой отзыв
+
+    .r-form__line
+        label.r-form__label(for="name")
+            | Как вас зовут?
+            span  *
+        input(type="text" name="name" id="name" placeholder="Иван Иванов" required).r-form__input.js-form-field
+
+    .r-form__line
+        label.r-form__label(for="email")
+            | E-mail
+            span  *
+        input(type="email" name="email" id="email" placeholder="@" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required).r-form__input.js-form-field
+
+    .r-form__line
+        label.r-form__label(for="number")
+            | Контактный телефон
+            span  *
+        input(type="text" name="number" id="number" placeholder="+7" required).r-form__input.js-form-field.js-number
+
+    .r-form__line
+        label.r-form__label(for="") Ваша оценка
+        .review__rating
+            svg.review__rating-star.review__rating-star--fill
+                use(xlink:href="img/sprites/sprite.svg#star")
+            svg.review__rating-star.review__rating-star--fill
+                use(xlink:href="img/sprites/sprite.svg#star")
+            svg.review__rating-star.review__rating-star--fill
+                use(xlink:href="img/sprites/sprite.svg#star")
+            svg.review__rating-star.review__rating-star--fill
+                use(xlink:href="img/sprites/sprite.svg#star")
+            svg.review__rating-star
+                use(xlink:href="img/sprites/sprite.svg#star")
+    .r-form__line
+        label.r-form__label(for="comment")
+            | Комментарий 
+            span  *
+        textarea(name="comment" id="comment" placeholder="Введите текст" rows="7" resize="none" required).r-form__input.js-form-field
+
+    .r-form__line
+
+        .dropzone.js-dropzone
+            .dz-message
+                svg.dz-message__icon
+                    use(xlink:href="img/sprites/sprite.svg#dropzone-icon")
+                .dz-message__text Загрузить фотографии. Максимальный вес 10 мегабайт. Расширение jpeg, png
+            .dz-preview-decor
+                svg.dz-message__icon
+                    use(xlink:href="img/sprites/sprite.svg#dropzone-icon")
+            #preview-container.dz-preview-container
+
+    .r-form__line
+        button.btn.btn--blue.js-submit Отправить
+
+#template-container(style="display: none;")
+    .dz-preview.dz-file-preview
+        .dz-image
+            img(data-dz-thumbnail)

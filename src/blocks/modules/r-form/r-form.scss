@@ -1,0 +1,101 @@
+.r-form {
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+
+    &.validated {
+        .r-form__input {
+            &:invalid {
+                border-color: #EA2828;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 30px;
+    }
+
+    &__line:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: block;
+        font-size: 500px;
+        margin-bottom: 6px;
+        font-size: 12px;
+        line-height: 14px;
+
+        span {
+            color: #EA2828;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        resize: none;
+        border-radius: 5px;
+        border: 1px solid #DADCE0;
+        padding: 12px 15px;
+        font-size: 14px;
+        color: #1A1A1A;
+        transition: border-color .3s, box-shadow .3s;
+
+        &:focus {
+            outline: none;
+            border-color: #0D78FF;
+            box-shadow: 0 0 4px 0 #0d78ff;
+        }
+
+        &::placeholder {
+            color: #8B8B8B;
+            opacity: 1;
+        }
+
+        &::-ms-input-placeholder {
+            color: #8B8B8B;
+        }
+    }
+
+    &__success {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: #F0F0F0;
+        text-align: center;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s;
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 29%;
+            margin-bottom: 20px;
+            color: #1A1A1A;
+        }
+
+        &-text {
+            font-size: 14px;
+            line-height: 21px;
+            color: #464646;
+        }
+    }
+}

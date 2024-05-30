@@ -1,0 +1,105 @@
+.dropzone {
+    display: flex;
+    gap: 6px;
+    min-height: 0;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px dashed #B1B1B1;
+    transition: background-color .3s, border-color .3s;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #E6F3FD;
+        border-color: #0D78FF;
+    }
+
+    .dz-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+
+        &__icon {
+            width: 36px;
+            height: 40px;
+        }
+
+        &__text {
+            color: #B1B1B1;
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 10px;
+        }
+    }
+
+    .dz-preview-container {
+        display: flex;
+        gap: 6px;
+    }
+
+    .dz-preview {
+        margin: 0;
+
+        &:hover {
+            .dz-image {
+                img {
+                    filter: none;
+                }
+            }
+        }
+
+        &-container {
+            display: flex;
+        }
+
+        &-decor {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 120px;
+            border: 1px solid #0D78FF;
+            border-radius: 5px;
+            flex-shrink: 0;
+            pointer-events: none;
+        }
+
+        &.dz-image-preview {
+            background: transparent;
+        }
+
+        .dz-image {
+            width: 90px;
+            height: 120px;
+            border-radius: 5px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+
+    .dz-remove {
+        font-size: 0;
+        color: transparent;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/svg/delete-icon.svg');
+        background-size: cover;
+        z-index: 10;
+    }
+
+    .dz-details {
+        display: none;
+    }
+
+    .dz-progress {
+        display: none;
+    }
+}

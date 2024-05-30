@@ -1,0 +1,19 @@
+.btn {
+    padding: 12px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #0D78FF;
+    border: none;
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: #0B68DD;
+    }
+
+    &:active {
+        background-color: #0358C3;
+    }
+}
